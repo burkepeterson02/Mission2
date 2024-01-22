@@ -1,4 +1,5 @@
-﻿using System.Dynamic;
+﻿using Mission2;
+using System.Dynamic;
 using System.Security.Cryptography.X509Certificates;
 
 internal class Program
@@ -6,7 +7,7 @@ internal class Program
     private static void Main(string[] args)
     {
         
-        Input ip = new Input();
+        input ip = new input();
         int amount = ip.GetCount();
 
         int[] results = new int[11];
@@ -62,17 +63,4 @@ internal class Program
 
         return randomNumber;
     }
-}
-
-internal class Input
-{
-    public int rolls;
-    public int GetCount()
-    {
-        System.Console.WriteLine("Welcome to the dice throwing simulator!\n");
-        System.Console.WriteLine("How many dice rolls would you like to simulate?\n");
-        rolls = int.Parse(System.Console.ReadLine());
-        return rolls;
-    }
-
 }
